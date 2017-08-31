@@ -85,66 +85,66 @@ L.drawLocal = {
 			// #TODO: this should be reorganized where actions are nested in actions
 			// ex: actions.undo  or actions.cancel
 			actions: {
-				title: 'Cancel drawing',
-				text: 'Cancel'
+				title: 'Annulla il disegno',
+				text: 'Annulla'
 			},
 			finish: {
-				title: 'Finish drawing',
-				text: 'Finish'
+				title: 'Finisci il disegno',
+				text: 'Finisci'
 			},
 			undo: {
-				title: 'Delete last point drawn',
-				text: 'Delete last point'
+				title: 'Cancella l\'ultimo punto disegnato',
+				text: 'Cancella l\'ultimo punto'
 			},
 			buttons: {
-				polyline: 'Draw a polyline',
-				polygon: 'Draw a polygon',
-				rectangle: 'Draw a rectangle',
-				circle: 'Draw a circle',
-				marker: 'Draw a marker',
-				circlemarker: 'Draw a circlemarker'
+				polyline: 'Disegna una polilinea',
+				polygon: 'Disegna un poligono',
+				rectangle: 'Disegna un rettangolo',
+				circle: 'Disegna un cerchio',
+				marker: 'Disegna un marker',
+				circlemarker: 'Disegna un circlemarker'
 			}
 		},
 		handlers: {
 			circle: {
 				tooltip: {
-					start: 'Click and drag to draw circle.'
+					start: 'Cliccare e spostare il dito per disegnare il cerchio d\'azione'
 				},
-				radius: 'Radius'
+				radius: 'Raggio'
 			},
 			circlemarker: {
 				tooltip: {
-					start: 'Click map to place circle marker.'
+					start: 'Clicca sulla mappa per posizionare il segnalino circolare.'
 				}
 			},
 			marker: {
 				tooltip: {
-					start: 'Click map to place marker.'
+					start: 'Clicca sulla mappa per posizionare il marker.'
 				}
 			},
 			polygon: {
 				tooltip: {
-					start: 'Click to start drawing shape.',
-					cont: 'Click to continue drawing shape.',
-					end: 'Click first point to close this shape.'
+					start: 'Clicca per cominciare a disegnare la figura.',
+					cont: 'Clicca per continuare a disegnare la figura.',
+					end: 'Clicca il primo punto per chiudere la figura.'
 				}
 			},
 			polyline: {
-				error: '<strong>Error:</strong> shape edges cannot cross!',
+				error: '<strong>Errore:</strong> i bordi della figura non si possono incrociare!',
 				tooltip: {
-					start: 'Click to start drawing line.',
-					cont: 'Click to continue drawing line.',
-					end: 'Click last point to finish line.'
+					start: 'Clicca per iniziare a disegnare la linea.',
+					cont: 'Clicca per continuare a disegnare la linea.',
+					end: 'Clicca l\'ultimo punto per finire la linea.'
 				}
 			},
 			rectangle: {
 				tooltip: {
-					start: 'Click and drag to draw rectangle.'
+					start: 'Clicca e trascina per disegnare il rettangolo.'
 				}
 			},
 			simpleshape: {
 				tooltip: {
-					end: 'Release mouse to finish drawing.'
+					end: 'Rilascia il mouse per finire di disegnare.'
 				}
 			}
 		}
@@ -153,35 +153,35 @@ L.drawLocal = {
 		toolbar: {
 			actions: {
 				save: {
-					title: 'Save changes',
-					text: 'Save'
+					title: 'Salva le modifiche',
+					text: 'Salva'
 				},
 				cancel: {
-					title: 'Cancel editing, discards all changes',
-					text: 'Cancel'
+					title: 'Anulla modifica, scarta tutte le modifiche',
+					text: 'Annulla'
 				},
 				clearAll:{
-					title: 'Clear all layers',
-					text: 'Clear All'
+					title: 'Pulisci tutti i layer',
+					text: 'Pulisci tutto'
 				}
 			},
 			buttons: {
-				edit: 'Edit layers',
-				editDisabled: 'No layers to edit',
-				remove: 'Delete layers',
-				removeDisabled: 'No layers to delete'
+				edit: 'Modifica i layer',
+				editDisabled: 'Nessun layer da modificare',
+				remove: 'Cancella i layer',
+				removeDisabled: 'Nessun layer da cancellare'
 			}
 		},
 		handlers: {
 			edit: {
 				tooltip: {
-					text: 'Drag handles or markers to edit features.',
-					subtext: 'Click cancel to undo changes.'
+					text: 'Cliccare e spostare il quadrato sulla circonferenza per aumentare\\diminuire il raggio di azione; cliccare e spostare il quadrato al centro della circonferenza per spostare il cerchio d\'azione',
+					subtext: 'Clicca annulla per annullare le modifiche.'
 				}
 			},
 			remove: {
 				tooltip: {
-					text: 'Click on a feature to remove.'
+					text: 'Clicca su una feature per rimuoverla.'
 				}
 			}
 		}
