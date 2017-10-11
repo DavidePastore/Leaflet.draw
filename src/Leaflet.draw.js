@@ -175,7 +175,7 @@ L.drawLocal = {
 		handlers: {
 			edit: {
 				tooltip: {
-					text: 'Cliccare e spostare i quadrati sulla circonferenza per modificare il raggio di azione',
+					text: 'Cliccare e spostare i quadrati sulla<br/>circonferenza per modificare il raggio<br/>di azione',
 					subtext: 'Clicca annulla per annullare le modifiche.'
 				}
 			},
