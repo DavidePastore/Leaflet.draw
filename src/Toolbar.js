@@ -179,7 +179,7 @@ L.Toolbar = L.Class.extend({
 	 * http://stackoverflow.com/a/9039885 */
 	_detectIOS: function () {
 		var iOS = (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream);
-		return iOS;
+		return false;
 	},
 
 	_createButton: function (options) {
