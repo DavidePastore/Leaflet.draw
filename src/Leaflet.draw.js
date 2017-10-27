@@ -108,7 +108,7 @@ L.drawLocal = {
 		handlers: {
 			circle: {
 				tooltip: {
-					start: 'Cliccare e spostare il dito per disegnare il cerchio d\'azione'
+					start: ''
 				},
 				radius: 'Raggio'
 			},
@@ -144,7 +144,7 @@ L.drawLocal = {
 			},
 			simpleshape: {
 				tooltip: {
-					end: 'Rilascia il mouse per finire di disegnare.'
+					end: ''
 				}
 			}
 		}
@@ -181,7 +181,7 @@ L.drawLocal = {
 			},
 			remove: {
 				tooltip: {
-					text: 'Clicca su una feature per rimuoverla.'
+					text: ''
 				}
 			}
 		}
