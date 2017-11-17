@@ -17,8 +17,10 @@ L.DrawToolbar = L.Toolbar.extend({
 		circlemarker: {}
 	},
 
+	language: 'en',
+
 	// @method initialize(): void
-	initialize: function (options) {
+	initialize: function (options, language) {
 		// Ensure that the options are merged correctly since L.extend is only shallow
 		for (var type in this.options) {
 			if (this.options.hasOwnProperty(type)) {
@@ -28,6 +30,7 @@ L.DrawToolbar = L.Toolbar.extend({
 			}
 		}
 
+		this.language = language;
 		this._toolbarClass = 'leaflet-draw-draw';
 		L.Toolbar.prototype.initialize.call(this, options);
 	},
@@ -53,7 +56,7 @@ L.DrawToolbar = L.Toolbar.extend({
 			},
 			{
 				enabled: this.options.circle,
-				handler: new L.Draw.Circle(map, this.options.circle),
+				handler: new L.Draw.Circle(map, this.options.circle, this.language),
 				title: L.drawLocal.draw.toolbar.buttons.circle
 			},
 			{

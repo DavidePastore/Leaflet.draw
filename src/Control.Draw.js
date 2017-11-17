@@ -8,7 +8,8 @@ L.Control.Draw = L.Control.extend({
 	options: {
 		position: 'topleft',
 		draw: {},
-		edit: false
+		edit: false,
+		language: 'en'
 	},
 
 	// @method initialize(): void
@@ -26,7 +27,7 @@ L.Control.Draw = L.Control.extend({
 
 		// Initialize toolbars
 		if (L.DrawToolbar && this.options.draw) {
-			toolbar = new L.DrawToolbar(this.options.draw);
+			toolbar = new L.DrawToolbar(this.options.draw, options.language);
 
 			this._toolbars[L.DrawToolbar.TYPE] = toolbar;
 

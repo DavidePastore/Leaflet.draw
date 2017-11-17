@@ -108,7 +108,10 @@ L.drawLocal = {
 		handlers: {
 			circle: {
 				tooltip: {
-					start: ''
+					start: {
+						en: 'Draw search circle',
+						it: 'Disegna il raggio di ricerca'
+					}
 				},
 				radius: 'Raggio'
 			},

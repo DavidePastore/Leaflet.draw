@@ -25,12 +25,15 @@ L.Draw.Circle = L.Draw.SimpleShape.extend({
 		nautic: false // When not metric, not feet use nautic mile for display
 	},
 
+	language: 'en',
+
 	// @method initialize(): void
-	initialize: function (map, options) {
+	initialize: function (map, options, language) {
 		// Save the type so super can fire, need to do this as cannot do this.TYPE :(
 		this.type = L.Draw.Circle.TYPE;
+		this.language = language;
 
-		this._initialLabelText = L.drawLocal.draw.handlers.circle.tooltip.start;
+		this._initialLabelText = L.drawLocal.draw.handlers.circle.tooltip.start[this.language];
 
 		L.Draw.SimpleShape.prototype.initialize.call(this, map, options);
 	},
