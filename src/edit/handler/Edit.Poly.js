@@ -296,7 +296,7 @@ L.Edit.PolyVerticesEdit = L.Handler.extend({
 
 				if (tooltip) {
 					tooltip.updateContent({
-						text: L.drawLocal.draw.handlers.polyline.error
+						text: L.drawLocalI18N[L.drawLanguage].draw.handlers.polyline.error
 					});
 				}
 
@@ -305,8 +305,8 @@ L.Edit.PolyVerticesEdit = L.Handler.extend({
 					poly.setStyle({ color: originalColor });
 					if (tooltip) {
 						tooltip.updateContent({
-							text: L.drawLocal.edit.handlers.edit.tooltip.text,
-							subtext: L.drawLocal.edit.handlers.edit.tooltip.subtext
+							text: L.drawLocalI18N[L.drawLanguage].edit.handlers.edit.tooltip.text,
+							subtext: L.drawLocalI18N[L.drawLanguage].edit.handlers.edit.tooltip.subtext
 						});
 					}
 				}, 1000);

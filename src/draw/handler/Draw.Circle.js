@@ -25,15 +25,12 @@ L.Draw.Circle = L.Draw.SimpleShape.extend({
 		nautic: false // When not metric, not feet use nautic mile for display
 	},
 
-	language: 'en',
-
 	// @method initialize(): void
-	initialize: function (map, options, language) {
+	initialize: function (map, options) {
 		// Save the type so super can fire, need to do this as cannot do this.TYPE :(
 		this.type = L.Draw.Circle.TYPE;
-		this.language = language;
 
-		this._initialLabelText = L.drawLocal.draw.handlers.circle.tooltip.start[this.language];
+		this._initialLabelText = L.drawLocalI18N[L.drawLanguage].draw.handlers.circle.tooltip.start;
 
 		L.Draw.SimpleShape.prototype.initialize.call(this, map, options);
 	},
@@ -74,7 +71,7 @@ L.Draw.Circle = L.Draw.SimpleShape.extend({
 
 			var subtext = '';
 			if (showRadius) {
-				subtext = L.drawLocal.draw.handlers.circle.radius + ': ' +
+				subtext = L.drawLocalI18N[L.drawLanguage].draw.handlers.circle.radius + ': ' +
 						  L.GeometryUtil.readableDistance(radius, useMetric, this.options.feet, this.options.nautic);
 			}
 			this._tooltip.updateContent({

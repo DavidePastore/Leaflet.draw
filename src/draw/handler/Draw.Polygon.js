@@ -63,12 +63,12 @@ L.Draw.Polygon = L.Draw.Polyline.extend({
 		var text, subtext;
 
 		if (this._markers.length === 0) {
-			text = L.drawLocal.draw.handlers.polygon.tooltip.start;
+			text = L.drawLocalI18N[L.drawLanguage].draw.handlers.polygon.tooltip.start;
 		} else if (this._markers.length < 3) {
-			text = L.drawLocal.draw.handlers.polygon.tooltip.cont;
+			text = L.drawLocalI18N[L.drawLanguage].draw.handlers.polygon.tooltip.cont;
 			subtext = this._getMeasurementString();
 		} else {
-			text = L.drawLocal.draw.handlers.polygon.tooltip.end;
+			text = L.drawLocalI18N[L.drawLanguage].draw.handlers.polygon.tooltip.end;
 			subtext = this._getMeasurementString();
 		}
 

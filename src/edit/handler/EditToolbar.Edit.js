@@ -72,8 +72,8 @@ L.EditToolbar.Edit = L.Handler.extend({
 
 			this._tooltip = new L.Draw.Tooltip(this._map);
 			this._tooltip.updateContent({
-				text: L.drawLocal.edit.handlers.edit.tooltip.text,
-				subtext: L.drawLocal.edit.handlers.edit.tooltip.subtext
+				text: L.drawLocalI18N[L.drawLanguage].edit.handlers.edit.tooltip.text,
+				subtext: L.drawLocalI18N[L.drawLanguage].edit.handlers.edit.tooltip.subtext
 			});
 
 			// Quickly access the tooltip to update for intersection checking
@@ -155,8 +155,8 @@ L.EditToolbar.Edit = L.Handler.extend({
 
 	_getTooltipText: function () {
 		return ({
-			text: L.drawLocal.edit.handlers.edit.tooltip.text,
-			subtext: L.drawLocal.edit.handlers.edit.tooltip.subtext
+			text: L.drawLocalI18N[L.drawLanguage].edit.handlers.edit.tooltip.text,
+			subtext: L.drawLocalI18N[L.drawLanguage].edit.handlers.edit.tooltip.subtext
 		});
 	},
 

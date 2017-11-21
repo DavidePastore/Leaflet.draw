@@ -27,7 +27,7 @@ L.Control.Draw = L.Control.extend({
 
 		// Initialize toolbars
 		if (L.DrawToolbar && this.options.draw) {
-			toolbar = new L.DrawToolbar(this.options.draw, options.language);
+			toolbar = new L.DrawToolbar(this.options.draw);
 
 			this._toolbars[L.DrawToolbar.TYPE] = toolbar;
 
@@ -44,6 +44,8 @@ L.Control.Draw = L.Control.extend({
 			this._toolbars[L.EditToolbar.TYPE].on('enable', this._toolbarEnabled, this);
 		}
 		L.toolbar = this; //set global var for editing the toolbar
+
+		L.drawLanguage = options.language || 'en'; // set language
 	},
 
 	// @method onAdd(): container

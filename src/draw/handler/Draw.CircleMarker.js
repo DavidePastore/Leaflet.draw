@@ -25,7 +25,7 @@ L.Draw.CircleMarker = L.Draw.Marker.extend({
 		// Save the type so super can fire, need to do this as cannot do this.TYPE :(
 		this.type = L.Draw.CircleMarker.TYPE;
 
-		this._initialLabelText = L.drawLocal.draw.handlers.circlemarker.tooltip.start;
+		this._initialLabelText = L.drawLocalI18N[L.drawLanguage].draw.handlers.circlemarker.tooltip.start;
 
 		L.Draw.Feature.prototype.initialize.call(this, map, options);
 	},

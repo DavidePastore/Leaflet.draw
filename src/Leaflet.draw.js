@@ -79,114 +79,228 @@ L.drawLocal = {
 	// 			decimal: '.'
 	// 		}
 	// 	}
-	// },
-	draw: {
-		toolbar: {
-			// #TODO: this should be reorganized where actions are nested in actions
-			// ex: actions.undo  or actions.cancel
-			actions: {
-				title: 'Annulla il disegno',
-				text: 'Annulla'
+	// }
+};
+
+
+L.drawLocalI18N = {
+	en: {
+		draw: {
+			toolbar: {
+				// #TODO: this should be reorganized where actions are nested in actions
+				// ex: actions.undo  or actions.cancel
+				actions: {
+					title: 'Cancel drawing',
+					text: 'Cancel'
+				},
+				finish: {
+					title: 'Finish drawing',
+					text: 'Finish'
+				},
+				undo: {
+					title: 'Delete last point drawn',
+					text: 'Delete last point'
+				},
+				buttons: {
+					polyline: 'Draw a polyline',
+					polygon: 'Draw a polygon',
+					rectangle: 'Draw a rectangle',
+					circle: 'Draw a circle',
+					marker: 'Draw a marker',
+					circlemarker: 'Draw a circlemarker'
+				}
 			},
-			finish: {
-				title: 'Finisci il disegno',
-				text: 'Finisci'
-			},
-			undo: {
-				title: 'Cancella l\'ultimo punto disegnato',
-				text: 'Cancella l\'ultimo punto'
-			},
-			buttons: {
-				polyline: 'Disegna una polilinea',
-				polygon: 'Disegna un poligono',
-				rectangle: 'Disegna un rettangolo',
-				circle: 'Disegna un cerchio',
-				marker: 'Disegna un marker',
-				circlemarker: 'Disegna un circlemarker'
-			}
-		},
-		handlers: {
-			circle: {
-				tooltip: {
-					start: {
-						en: 'Draw search circle',
-						it: 'Disegna il raggio di ricerca'
+			handlers: {
+				circle: {
+					tooltip: {
+						start: 'Draw search circle'
+					},
+					radius: 'Radius'
+				},
+				circlemarker: {
+					tooltip: {
+						start: 'Click map to place circle marker.'
 					}
 				},
-				radius: 'Raggio'
-			},
-			circlemarker: {
-				tooltip: {
-					start: 'Clicca sulla mappa per posizionare il segnalino circolare.'
+				marker: {
+					tooltip: {
+						start: 'Click map to place marker.'
+					}
+				},
+				polygon: {
+					tooltip: {
+						start: 'Click to start drawing shape.',
+						cont: 'Click to continue drawing shape.',
+						end: 'Click first point to close this shape.'
+					}
+				},
+				polyline: {
+					error: '<strong>Error:</strong> shape edges cannot cross!',
+					tooltip: {
+						start: 'Click to start drawing line.',
+						cont: 'Click to continue drawing line.',
+						end: 'Click last point to finish line.'
+					}
+				},
+				rectangle: {
+					tooltip: {
+						start: 'Click and drag to draw rectangle.'
+					}
+				},
+				simpleshape: {
+					tooltip: {
+						end: 'Release mouse to finish drawing.'
+					}
+				}
+			}
+		},
+		edit: {
+			toolbar: {
+				actions: {
+					save: {
+						title: 'Save changes',
+						text: 'Save'
+					},
+					cancel: {
+						title: 'Cancel editing, discards all changes',
+						text: 'Cancel'
+					},
+					clearAll:{
+						title: 'Clear all layers',
+						text: 'Clear All'
+					}
+				},
+				buttons: {
+					edit: 'Edit layers',
+					editDisabled: 'No layers to edit',
+					remove: 'Delete layers',
+					removeDisabled: 'No layers to delete'
 				}
 			},
-			marker: {
-				tooltip: {
-					start: 'Clicca sulla mappa per posizionare il marker.'
-				}
-			},
-			polygon: {
-				tooltip: {
-					start: 'Clicca per cominciare a disegnare la figura.',
-					cont: 'Clicca per continuare a disegnare la figura.',
-					end: 'Clicca il primo punto per chiudere la figura.'
-				}
-			},
-			polyline: {
-				error: '<strong>Errore:</strong> i bordi della figura non si possono incrociare!',
-				tooltip: {
-					start: 'Clicca per iniziare a disegnare la linea.',
-					cont: 'Clicca per continuare a disegnare la linea.',
-					end: 'Clicca l\'ultimo punto per finire la linea.'
-				}
-			},
-			rectangle: {
-				tooltip: {
-					start: 'Clicca e trascina per disegnare il rettangolo.'
-				}
-			},
-			simpleshape: {
-				tooltip: {
-					end: ''
+			handlers: {
+				edit: {
+					tooltip: {
+						text: 'Drag handles or markers to edit features.',
+						subtext: 'Click cancel to undo changes.'
+					}
+				},
+				remove: {
+					tooltip: {
+						text: 'Click on a feature to remove.'
+					}
 				}
 			}
 		}
 	},
-	edit: {
-		toolbar: {
-			actions: {
-				save: {
-					title: 'Salva le modifiche',
-					text: 'Salva'
-				},
-				cancel: {
-					title: 'Anulla modifica, scarta tutte le modifiche',
+	it: {
+		draw: {
+			toolbar: {
+				// #TODO: this should be reorganized where actions are nested in actions
+				// ex: actions.undo  or actions.cancel
+				actions: {
+					title: 'Annulla il disegno',
 					text: 'Annulla'
 				},
-				clearAll:{
-					title: 'Pulisci tutti i layer',
-					text: 'Pulisci tutto'
+				finish: {
+					title: 'Finisci il disegno',
+					text: 'Finisci'
+				},
+				undo: {
+					title: 'Cancella l\'ultimo punto disegnato',
+					text: 'Cancella l\'ultimo punto'
+				},
+				buttons: {
+					polyline: 'Disegna una polilinea',
+					polygon: 'Disegna un poligono',
+					rectangle: 'Disegna un rettangolo',
+					circle: 'Disegna un cerchio',
+					marker: 'Disegna un marker',
+					circlemarker: 'Disegna un circlemarker'
 				}
 			},
-			buttons: {
-				edit: 'Modifica i layer',
-				editDisabled: 'Nessun layer da modificare',
-				remove: 'Cancella i layer',
-				removeDisabled: 'Nessun layer da cancellare'
+			handlers: {
+				circle: {
+					tooltip: {
+						start: 'Disegna il raggio di ricerca'
+					},
+					radius: 'Raggio'
+				},
+				circlemarker: {
+					tooltip: {
+						start: 'Clicca sulla mappa per posizionare il segnalino circolare.'
+					}
+				},
+				marker: {
+					tooltip: {
+						start: 'Clicca sulla mappa per posizionare il marker.'
+					}
+				},
+				polygon: {
+					tooltip: {
+						start: 'Clicca per cominciare a disegnare la figura.',
+						cont: 'Clicca per continuare a disegnare la figura.',
+						end: 'Clicca il primo punto per chiudere la figura.'
+					}
+				},
+				polyline: {
+					error: '<strong>Errore:</strong> i bordi della figura non si possono incrociare!',
+					tooltip: {
+						start: 'Clicca per iniziare a disegnare la linea.',
+						cont: 'Clicca per continuare a disegnare la linea.',
+						end: 'Clicca l\'ultimo punto per finire la linea.'
+					}
+				},
+				rectangle: {
+					tooltip: {
+						start: 'Clicca e trascina per disegnare il rettangolo.'
+					}
+				},
+				simpleshape: {
+					tooltip: {
+						end: ''
+					}
+				}
 			}
 		},
-		handlers: {
-			edit: {
-				tooltip: {
-					text: 'Cliccare e spostare i quadrati sulla<br/>circonferenza per modificare il raggio<br/>di azione',
-					subtext: 'Clicca annulla per annullare le modifiche.'
+		edit: {
+			toolbar: {
+				actions: {
+					save: {
+						title: 'Salva le modifiche',
+						text: 'Salva'
+					},
+					cancel: {
+						title: 'Anulla modifica, scarta tutte le modifiche',
+						text: 'Annulla'
+					},
+					clearAll:{
+						title: 'Pulisci tutti i layer',
+						text: 'Pulisci tutto'
+					}
+				},
+				buttons: {
+					edit: 'Modifica i layer',
+					editDisabled: 'Nessun layer da modificare',
+					remove: 'Cancella i layer',
+					removeDisabled: 'Nessun layer da cancellare'
 				}
 			},
-			remove: {
-				tooltip: {
-					text: ''
+			handlers: {
+				edit: {
+					tooltip: {
+						text: 'Cliccare e spostare i quadrati sulla<br/>circonferenza per modificare il raggio<br/>di azione',
+						subtext: 'Clicca annulla per annullare le modifiche.'
+					}
+				},
+				remove: {
+					tooltip: {
+						text: ''
+					}
 				}
 			}
 		}
 	}
 };
+
+
+L.drawLanguage = 'en';

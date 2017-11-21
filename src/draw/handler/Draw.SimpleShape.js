@@ -11,7 +11,7 @@ L.Draw.SimpleShape = L.Draw.Feature.extend({
 
 	// @method initialize(): void
 	initialize: function (map, options) {
-		this._endLabelText = L.drawLocal.draw.handlers.simpleshape.tooltip.end;
+		this._endLabelText = L.drawLocalI18N[L.drawLanguage].draw.handlers.simpleshape.tooltip.end;
 
 		L.Draw.Feature.prototype.initialize.call(this, map, options);
 	},

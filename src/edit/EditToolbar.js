@@ -64,14 +64,14 @@ L.EditToolbar = L.Toolbar.extend({
 					selectedPathOptions: this.options.edit.selectedPathOptions,
 					poly: this.options.poly
 				}),
-				title: L.drawLocal.edit.toolbar.buttons.edit
+				title: L.drawLocalI18N[L.drawLanguage].edit.toolbar.buttons.edit
 			},
 			{
 				enabled: this.options.remove,
 				handler: new L.EditToolbar.Delete(map, {
 					featureGroup: featureGroup
 				}),
-				title: L.drawLocal.edit.toolbar.buttons.remove
+				title: L.drawLocalI18N[L.drawLanguage].edit.toolbar.buttons.remove
 			}
 		];
 	},
@@ -81,14 +81,14 @@ L.EditToolbar = L.Toolbar.extend({
 	getActions: function (handler) {
 		var actions = [
 			{
-				title: L.drawLocal.edit.toolbar.actions.save.title,
-				text: L.drawLocal.edit.toolbar.actions.save.text,
+				title: L.drawLocalI18N[L.drawLanguage].edit.toolbar.actions.save.title,
+				text: L.drawLocalI18N[L.drawLanguage].edit.toolbar.actions.save.text,
 				callback: this._save,
 				context: this
 			},
 			{
-				title: L.drawLocal.edit.toolbar.actions.cancel.title,
-				text: L.drawLocal.edit.toolbar.actions.cancel.text,
+				title: L.drawLocalI18N[L.drawLanguage].edit.toolbar.actions.cancel.title,
+				text: L.drawLocalI18N[L.drawLanguage].edit.toolbar.actions.cancel.text,
 				callback: this.disable,
 				context: this
 			}
@@ -96,8 +96,8 @@ L.EditToolbar = L.Toolbar.extend({
 
 		if (handler.removeAllLayers) {
 			 actions.push({
-                 title: L.drawLocal.edit.toolbar.actions.clearAll.title,
-                 text: L.drawLocal.edit.toolbar.actions.clearAll.text,
+                 title: L.drawLocalI18N[L.drawLanguage].edit.toolbar.actions.clearAll.title,
+                 text: L.drawLocalI18N[L.drawLanguage].edit.toolbar.actions.clearAll.text,
                  callback: this._clearAllLayers,
                  context: this
              });
@@ -169,8 +169,8 @@ L.EditToolbar = L.Toolbar.extend({
 			button.setAttribute(
 				'title',
 				hasLayers ?
-					L.drawLocal.edit.toolbar.buttons.edit
-					: L.drawLocal.edit.toolbar.buttons.editDisabled
+					L.drawLocalI18N[L.drawLanguage].edit.toolbar.buttons.edit
+					: L.drawLocalI18N[L.drawLanguage].edit.toolbar.buttons.editDisabled
 			);
 		}
 
@@ -186,8 +186,8 @@ L.EditToolbar = L.Toolbar.extend({
 			button.setAttribute(
 				'title',
 				hasLayers ?
-					L.drawLocal.edit.toolbar.buttons.remove
-					: L.drawLocal.edit.toolbar.buttons.removeDisabled
+					L.drawLocalI18N[L.drawLanguage].edit.toolbar.buttons.remove
+					: L.drawLocalI18N[L.drawLanguage].edit.toolbar.buttons.removeDisabled
 			);
 		}
 	}

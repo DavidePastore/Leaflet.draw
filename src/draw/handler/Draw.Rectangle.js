@@ -28,7 +28,7 @@ L.Draw.Rectangle = L.Draw.SimpleShape.extend({
 		// Save the type so super can fire, need to do this as cannot do this.TYPE :(
 		this.type = L.Draw.Rectangle.TYPE;
 
-		this._initialLabelText = L.drawLocal.draw.handlers.rectangle.tooltip.start;
+		this._initialLabelText = L.drawLocalI18N[L.drawLanguage].draw.handlers.rectangle.tooltip.start;
 
 		L.Draw.SimpleShape.prototype.initialize.call(this, map, options);
 	},

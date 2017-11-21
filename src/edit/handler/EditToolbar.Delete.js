@@ -73,7 +73,7 @@ L.EditToolbar.Delete = L.Handler.extend({
 			this._deletedLayers = new L.LayerGroup();
 
 			this._tooltip = new L.Draw.Tooltip(this._map);
-			this._tooltip.updateContent({ text: L.drawLocal.edit.handlers.remove.tooltip.text });
+			this._tooltip.updateContent({ text: L.drawLocalI18N[L.drawLanguage].edit.handlers.remove.tooltip.text });
 
 			this._map.on('mousemove', this._onMouseMove, this);
 		}

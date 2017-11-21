@@ -52,7 +52,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		}
 
 		// Need to set this here to ensure the correct message is used.
-		this.options.drawError.message = L.drawLocal.draw.handlers.polyline.error;
+		this.options.drawError.message = L.drawLocalI18N[L.drawLanguage].draw.handlers.polyline.error;
 
 		// Merge default drawError options with custom options
 		if (options && options.drawError) {
@@ -475,19 +475,19 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		}
 		if (this._markers.length === 0) {
 			labelText = {
-				text: L.drawLocal.draw.handlers.polyline.tooltip.start
+				text: L.drawLocalI18N[L.drawLanguage].draw.handlers.polyline.tooltip.start
 			};
 		} else {
 			distanceStr = showLength ? this._getMeasurementString() : '';
 
 			if (this._markers.length === 1) {
 				labelText = {
-					text: L.drawLocal.draw.handlers.polyline.tooltip.cont,
+					text: L.drawLocalI18N[L.drawLanguage].draw.handlers.polyline.tooltip.cont,
 					subtext: distanceStr
 				};
 			} else {
 				labelText = {
-					text: L.drawLocal.draw.handlers.polyline.tooltip.end,
+					text: L.drawLocalI18N[L.drawLanguage].draw.handlers.polyline.tooltip.end,
 					subtext: distanceStr
 				};
 			}
