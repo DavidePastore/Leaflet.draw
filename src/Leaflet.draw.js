@@ -90,8 +90,8 @@ L.drawLocalI18N = {
 				// #TODO: this should be reorganized where actions are nested in actions
 				// ex: actions.undo  or actions.cancel
 				actions: {
-					title: 'Cancel drawing',
-					text: 'Cancel'
+					title: 'Draw search circle',
+					text: 'Draw search circle'
 				},
 				finish: {
 					title: 'Finish drawing',
@@ -113,7 +113,7 @@ L.drawLocalI18N = {
 			handlers: {
 				circle: {
 					tooltip: {
-						start: 'Draw search circle'
+						start: ''
 					},
 					radius: 'Radius'
 				},
@@ -198,8 +198,8 @@ L.drawLocalI18N = {
 				// #TODO: this should be reorganized where actions are nested in actions
 				// ex: actions.undo  or actions.cancel
 				actions: {
-					title: 'Annulla il disegno',
-					text: 'Annulla'
+					title: 'Disegna il raggio di ricerca',
+					text: 'Disegna il raggio di ricerca'
 				},
 				finish: {
 					title: 'Finisci il disegno',
@@ -221,7 +221,7 @@ L.drawLocalI18N = {
 			handlers: {
 				circle: {
 					tooltip: {
-						start: 'Disegna il raggio di ricerca'
+						start: ''
 					},
 					radius: 'Raggio'
 				},

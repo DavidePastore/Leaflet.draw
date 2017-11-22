@@ -90,7 +90,7 @@ L.DrawToolbar = L.Toolbar.extend({
 			{
 				title: L.drawLocalI18N[L.drawLanguage].draw.toolbar.actions.title,
 				text: L.drawLocalI18N[L.drawLanguage].draw.toolbar.actions.text,
-				callback: this.disable,
+				callback: function(){},
 				context: this
 			}
 		];
