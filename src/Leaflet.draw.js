@@ -186,7 +186,7 @@ L.drawLocalI18N = {
 				},
 				remove: {
 					tooltip: {
-						text: 'Click on a feature to remove.'
+						text: ''
 					}
 				}
 			}
